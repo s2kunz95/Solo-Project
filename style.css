@@ -1,10 +1,20 @@
 /*Global*/
 
+body {
+	background: #f3e8dd !important;
+}
+
+section {
+	padding-bottom: 60px;
+}
 
 /*Header*/
 
 header {
-	background: #9d1414;
+	background-color: #9d1414;
+	position: fixed;
+	z-index: 1;
+	width: 100%;
 }
 
 /*Nav Menu*/
@@ -425,6 +435,7 @@ header .nav-icons {
 
 .main .slide-show {
 	overflow: hidden;
+	padding-top: 100px;
 }
 
 .slide-show figure {
@@ -438,8 +449,6 @@ header .nav-icons {
 	float: left;
 	width: 25%;
 }
-
-
 
 @keyframes slide {
 	0%, 20% {
@@ -457,4 +466,48 @@ header .nav-icons {
 	75%, 95% {
 		left: -300%;
 	}
+}
+
+.main .banner {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.banner .banner-nav {
+	color: #dbb9b1;
+	margin: 0 3rem;
+	transition: all 0.5s;
+}
+
+.banner .banner-nav:hover {
+	color: #ffc03f;
+	cursor: pointer;
+}
+
+.banner .banner-img {
+	overflow: hidden;
+	width: 65%;
+}
+
+.banner .row {
+	position: relative;
+	width: 220%;
+	left: 0;
+	float: left;
+	transition: all 1s;
+}
+
+.banner .row .banner-item {
+	padding: 0 1rem;
+	transition: all 1s;
+	transform: scale(0);
+}
+
+.banner .row .banner-item img {
+	transition: all 0.5s;
+}
+
+.banner .row .banner-item:hover img {
+	transform: scale(1.05);
 }
