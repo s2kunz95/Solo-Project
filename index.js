@@ -40,4 +40,30 @@ $(document).ready(function() {
 			$('.search-modal').css('display', 'none');	
 		}
 	});
+
+	// Banner nav
+
+	var navCount = 0;
+
+	$('.previous').click(function() {
+		if(navCount > -99) {
+			$('.four-img').css('left', (navCount - 33).toString() + '%');
+			navCount -= 33;
+		}
+	});
+
+	$('.next').click(function() {
+		if(navCount < 0) {
+			$('.four-img').css('left', (navCount + 33).toString() + '%');
+			navCount += 33;
+		}
+	});
+
+	// Banner nav scroll
+
+	window.onscroll = function() {
+		if(document.documentElement.scrollTop > 0) {
+			$('.banner-item').css('transform', 'scale(1)');
+		}
+	}
 });
