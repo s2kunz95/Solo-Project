@@ -8,6 +8,9 @@
 
 	<link rel="stylesheet" type="text/css" href="./style.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<!-- Import Fonts7 -->
+	<link href="https://fonts.googleapis.com/css2?family=Playball&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
 
 	<script src="https://kit.fontawesome.com/9b3bf5531d.js" crossorigin="anonymous"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -202,12 +205,12 @@
 							<i class="fa fa-ellipsis-v"></i>
 							<div class="account-dropdown">
 								<div class="form-name">
-									<a href="">LOGIN</a>
+									<a class="frm-switch frm-login frm-active">LOGIN</a>
 									<span> | </span>
-									<a href="">REGISTER</a>
+									<a class="frm-switch frm-register">REGISTER</a>
 								</div>
 								<div class="switch-form">
-									<form>
+									<form class="login-frm">
 										<div class="form-email">
 											<input type="email" placeholder="Email Address *">
 										</div>
@@ -215,11 +218,29 @@
 											<input type="password" class="password-field" placeholder="Password *">
 											<i class="far fa-eye fa-xs"></i>
 										</div>
-										<div class="login-btn">
+										<div class="submit-btn">
 											<input type="submit" value="LOGIN">
 										</div>
 										<div class="forgot">
 											<a href="">Forgot your password?</a>
+										</div>
+									</form>
+									<form class="register-frm">
+										<div>
+											<input type="text" placeholder="First Name">
+										</div>
+										<div>
+											<input type="text" placeholder="Last Name">
+										</div>
+										<div class="form-email">
+											<input type="email" placeholder="Email">
+										</div>
+										<div class="form-password">
+											<input type="password" class="password-field" placeholder="Password *">
+											<i class="far fa-eye fa-xs"></i>
+										</div>
+										<div class="submit-btn">
+											<input type="submit" value="CREATE">
 										</div>
 									</form>
 								</div>
@@ -231,13 +252,13 @@
 								</div>
 								<ul class="currencies">
 									<a>
-										<input type="button" id="usd-cur" value="USD" autofocus>
+										<input type="button" class="cur active" id="usd-cur" value="USD" autofocus>
 									</a>
 									<a>
-										<input type="button" value="GBP">
+										<input type="button" class="cur" value="GBP">
 									</a>
 									<a>
-										<input type="button" value="EUR">
+										<input type="button" class="cur" value="EUR">
 									</a>
 								</ul>
 							</div>
@@ -294,6 +315,24 @@
 			</div>
 			<div class="banner-nav next">
 				<span><i class="fas fa-arrow-circle-right fa-2x"></i></span>
+			</div>
+		</section>
+		<section class="welcome container">
+			<div class="row">
+				<h2 class="title">Welcome To Yummy!</h2>
+				<div class="welcome-content">
+					<p class="welcome-caption">
+						Aliquam dapibus tincidunt metus. Praesent justo dolor, lobortis quis, lobortis dignissim, pulvinar ac, lorem. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent vestibulum molestie lacus. Aenean nonummy hendrerit mauris. Phasellus porta. Fusce suscipit varius mi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce feugiat malesuada odio.
+					</p>
+					<img src="./Images/welcome.webp" class="welcome-img">
+				</div>	
+			</div>
+		</section>
+		<section class="container products">
+			<div class="row">
+				<div class="banner-product">
+					<h2>FAST FOOD</h2>
+				</div>
 			</div>
 		</section>
 	</div>
