@@ -2,6 +2,7 @@
 
 body {
 	background: #f3e8dd !important;
+	font-family: 'Josefin Sans', sans-serif !important;
 }
 
 section {
@@ -283,8 +284,9 @@ header .nav-icons {
 	padding: 0.5rem;
 }
 
+.form-name .frm-active,
 .form-name a:hover {
-	color: #FFF;
+	color: #FFF !important;
 }
 
 .switch-form form input {
@@ -293,6 +295,14 @@ header .nav-icons {
 	border: 1px solid #dbcebd;
 	border-radius: 4px;
 	margin-bottom: 1rem;
+}
+
+.switch-form .register-frm {
+	display: none;
+}
+
+.register-frm input {
+	background: #f3e8dd;
 }
 
 .switch-form ::placeholder {
@@ -316,7 +326,7 @@ header .nav-icons {
 	cursor: pointer;
 }
 
-.login-btn input {
+.submit-btn input {
 	background: #9d1414;
 	border: none !important;
 	color: #FFF;
@@ -325,7 +335,7 @@ header .nav-icons {
 	transition: all 0.5s
 }
 
-.login-btn input:hover {
+.submit-btn input:hover {
 	background: #FFF;
 	color: #000;
 }
@@ -377,7 +387,7 @@ header .nav-icons {
 	opacity: 0.5;
 }
 
-.currencies input:focus,
+.currencies .active,
 .currencies input:hover {
 	background: #ffc03f;
 	color: #9d1414;
@@ -487,7 +497,7 @@ header .nav-icons {
 
 .banner .banner-img {
 	overflow: hidden;
-	width: 65%;
+	width: 62%;
 }
 
 .banner .row {
@@ -499,7 +509,7 @@ header .nav-icons {
 }
 
 .banner .row .banner-item {
-	padding: 0 1rem;
+	padding: 0 0.5rem;
 	transition: all 1s;
 	transform: scale(0);
 }
@@ -511,3 +521,30 @@ header .nav-icons {
 .banner .row .banner-item:hover img {
 	transform: scale(1.05);
 }
+
+/*Welcome*/
+
+.main .welcome {
+	transform: scale(0);
+	transition: all 1s;
+}
+
+.welcome .title {
+	font-family: 'Playball', cursive;
+	margin: 0 auto;
+	font-size: 72px;
+	margin-bottom: 3rem;
+}
+
+.welcome-content .welcome-caption {
+	text-align: center;
+	margin-bottom: 50px; 
+	line-height: 1.6rem;
+	font-weight: 500;
+}
+
+.welcome-content img {
+	display: block;
+	margin: 0 auto;
+}
+
