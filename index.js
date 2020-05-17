@@ -94,5 +94,45 @@ $(document).ready(function() {
 		if(document.documentElement.scrollTop > 300) {
 			$('.welcome').css('transform', 'scale(1)');
 		}
+		if(document.documentElement.scrollTop > 900) {
+			$('.fast-food').css('top', '0');
+		}
+		if(document.documentElement.scrollTop > 1300) {
+			$('.fast-food-pro').css('top', '0');
+		}
+		if(document.documentElement.scrollTop > 1700) {
+			$('.pizza').css('top', '0');
+		}
+		if(document.documentElement.scrollTop > 2100) {
+			$('.pizza-pro').css('top', '0');
+		}
+		if(document.documentElement.scrollTop > 2500) {
+			$('.hamburger').css('top', '0');
+		}
+		if(document.documentElement.scrollTop > 2900) {
+			$('.hamburger-pro').css('top', '0');
+		}
+		if(document.documentElement.scrollTop > 3300) {
+			$('.drink').css('top', '0');
+		}
+		if(document.documentElement.scrollTop > 3700) {
+			$('.drink-pro').css('top', '0');
+		}
+	}
+
+	// Products
+	var products = document.getElementsByClassName('product-content');
+	$('.banner-product').fadeIn(2000);
+	var slideCount = 0.5;
+	var count = 0;
+
+	for(var i = 0; i < products.length; i++) {
+		products[i].style.transitionDuration = slideCount.toString() + 's';
+		slideCount += 0.5;
+		count++;
+		if(count === 4) {
+			count = 0;
+			slideCount = 0.5;
+		}
 	}
 });

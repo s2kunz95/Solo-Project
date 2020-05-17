@@ -14,7 +14,7 @@ section {
 header {
 	background-color: #9d1414;
 	position: fixed;
-	z-index: 1;
+	z-index: 100;
 	width: 100%;
 }
 
@@ -548,3 +548,247 @@ header .nav-icons {
 	margin: 0 auto;
 }
 
+/*Products*/
+
+.products .banner-product {
+	display: none;
+	transition: all 1s;
+	position: relative;
+	top: 300px;
+	padding: 55px 100px;
+	border-radius: 4px;
+	width: 100%;
+}
+
+.products .fast-food {
+	background: url('./Images/banner_product_1.jpg') no-repeat;
+}
+
+.products .pizza {
+	background: url('./Images/banner_product_2.jpg') no-repeat;
+}
+
+.products .hamburger {
+	background: url('./Images/banner_product_3.jpg') no-repeat;
+}
+
+.products .drink {
+	background: url('./Images/banner_product_4.jpg') no-repeat;
+}
+
+.banner-product h2 {
+	font-size: 60px;
+	color: #f3eade;
+	font-family: 'Playball', cursive;
+	text-align: center;
+}
+
+.products .product-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	top: 300px;
+	transition-property: all;
+}
+
+
+.products .product-content:hover .round-img {
+	animation: spin 6s infinite;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	50% {
+		transform: rotate(90deg)
+	}
+}
+
+.product-content .product-label {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	left: -15px;
+	top: -15px;
+	font-family: 'Playball', cursive;
+	font-size: 22px;
+	height: 70px;
+	width: 70px;
+	border-radius: 50%;
+	overflow: hidden;
+	z-index: 2;
+	border: 5px solid #FFF;
+	color: #FFF;
+	font-weight: bold;
+}
+
+.product-content:hover .product-label {
+	animation: around 6s infinite;
+}
+
+@keyframes around {
+	0% {
+		top: -15px;
+		left: -15px;
+	}
+
+	10%, 50% {
+		top: 10px;
+		left: -30px;
+	}
+
+	100% {
+		top: -15px;
+		left: -15px;
+	}
+}
+
+.product-content .new-label {
+	background: #c83700;
+}
+
+.product-content .sale-label {
+	background: #8ec63f;
+	font-size: 14px;
+}
+
+.product-content .hot-label {
+	background: #fea348;
+}
+
+.product-content .best-label {
+	background: #e18694;
+}
+
+.product-content .product-img {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.product-img .round-img {
+	position: absolute;
+	border-radius: 50%;
+	overflow: hidden;
+	z-index: 1;
+}
+
+.product-img .round-img img {
+	width: 100%;
+}
+
+.product-img .round-border {
+	position: relative;
+
+}
+
+.product-img .product-hover {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	height: 60%;
+	width: 100%;
+	position: absolute;
+	z-index: 1;
+	bottom: 0;
+	transition: all 0.5s;
+	opacity: 0;
+}
+
+.product-content:hover .product-hover {
+	opacity: 1;
+}
+
+.product-hover .quickview-bar {
+	display: flex;
+	justify-content: space-evenly;
+	list-style: none;
+	padding: 0;
+	width: 80%;
+}
+
+.quickview-bar li {
+	text-align: center;
+	line-height: 3rem;
+	color: #FFF;
+	width: 3rem;
+	height: 3rem;	
+	background: #ffc03f;
+	border-radius: 50%;
+	overflow: hidden;
+	border: 3px solid #FFF;
+	transition: all 0.5s;
+}
+
+.quickview-bar li:hover {
+	background: #9d1414;
+}
+
+.product-hover button {
+	position: relative;
+	color: #FFF;
+	background: #ffc03f;
+	border: none;
+	outline: none;
+	height: 44px;
+	width: 90%;
+}
+
+.product-hover .hover-btn:before {
+	content: "";
+	display: block;
+	position: absolute;
+	background-image: url('./Images/btn-left-pro.png');
+	top: 0;
+	left: -9px;
+	height: 44px;
+	width: 9px;
+}
+
+.product-hover .hover-btn:after {
+	content: "";
+	display: block;
+	position: absolute;
+	background-image: url('./Images/btn-right-pro.png');
+	top: 0;
+	right: -9px;
+	height: 44px;
+	width: 9px;
+}
+
+.product-content .product-info {
+	padding-top: 40px;
+}
+
+.product-info .product-title {
+	font-family: 'Playball', cursive;
+	font-size: 30px;
+	text-align: center;
+	margin-bottom: 5px;
+	transition: all 0.5s;
+}
+
+.product-info .product-title:hover {
+	color: #c83700;
+}
+
+.product-info .product-price {
+	font-family: 'Playball', cursive;
+	color: #9d1414;
+	font-size: 20px;
+	text-align: center;
+}
+
+.product-price .price-compare {
+	font-style: italic;
+	color: #000;
+	font-size: 16px;
+	text-decoration: line-through;
+	padding: 0 5px;
+}
