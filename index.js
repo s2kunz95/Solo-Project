@@ -118,11 +118,14 @@ $(document).ready(function() {
 		if(document.documentElement.scrollTop > 3700) {
 			$('.drink-pro').css('top', '0');
 		}
+		if(document.documentElement.scrollTop > 4100) {
+			$('.contact-banner').css('transform', 'scale(1)');
+		}
 	}
 
 	// Products
 	var products = document.getElementsByClassName('product-content');
-	$('.banner-product').fadeIn(2000);
+	$('.banner-product').fadeIn(3000);
 	var slideCount = 0.5;
 	var count = 0;
 

@@ -792,3 +792,44 @@ header .nav-icons {
 	text-decoration: line-through;
 	padding: 0 5px;
 }
+
+/*Contact Banner*/
+
+.main .contact-banner {
+	position: relative;
+	transform: scale(0);
+	transition: all 1s;
+}
+
+.contact-banner .free-shipping {
+	transition: all 0.5s;
+}
+
+.contact-banner .free-shipping img {
+	width: 100%;
+}
+
+.contact-banner .free-shipping:hover {
+	transform: scale(1.05);
+}
+
+.contact-banner .contact-banner-caption {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	bottom: 15%;
+	right: 20%;
+}
+
+.contact-banner-caption .title {
+	color: #ffdaa8;
+	font-size: 100px;
+	line-height: 70px;	
+}
+
+.contact-banner-caption .caption {
+	font-family: 'Playball', cursive;
+	color: #FFF;
+	font-size: 60px;
+
+}
