@@ -138,4 +138,30 @@ $(document).ready(function() {
 			slideCount = 0.5;
 		}
 	}
+
+	// Gallery
+
+	var galleryItems = document.querySelectorAll('.gallery-item');
+	var galleryImgs = document.querySelectorAll('gallery-img');
+	var lightBox = document.getElementsByClassName('gallery-lightbox');
+
+	galleryItems.forEach(function(item) {
+		item.addEventListener('click', function() {
+			lightBox[0].classList.add('lb-active');
+			var lbImg =  document.createElement('img');
+			lbImg.src =  item.children[0].children[0].src;
+			while(lightBox[0].firstChild) {
+				lightBox[0].removeChild(lightBox[0].firstChild);
+			}
+			lightBox[0].appendChild(lbImg);
+			console.log(lightBox[0].firstChild);
+		})
+	})
+
+	lightBox[0].addEventListener('click', function(event) {
+		if(event.target !== lightBox) {
+			lightBox[0].classList.remove('lb-active');
+			// lightBox[0].removeChild(lightBox[0].firstChild); //the second way to remove the previous img
+		}
+	})
 });
